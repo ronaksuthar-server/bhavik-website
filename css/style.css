@@ -263,7 +263,7 @@ ol {
 -----------------------*/
 
 .header {
-	background: rgba(98, 57, 49, 0.5); /*rgba(42, 1, 74, 0.5)*/
+	background: rgba(0,0,0,0.2); /*rgba(original - 42, 1, 74, 0.5)*/ /*after change - 98, 57, 49, 0.5*/
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -541,6 +541,40 @@ ol {
 	margin-right: 0;
 }
 
+/*---------Left to right---------*/
+
+.event_rtl_slider .owl-nav{
+	display:none;
+}
+
+.event_rtl_slider .col-lg-4 {
+	max-width: 100%;
+}
+
+.event_rtl_slider.owl-carousel .owl-stage-outer {
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+
+.event_rtl_slider.owl-carousel .owl-nav {
+	position: absolute;
+	right: 15px;
+	top: -50px;
+}
+
+.event_rtl_slider.owl-carousel .owl-nav button {
+	font-size: 22px;
+	color: #111111;
+	opacity: 0.5;
+	margin-right: 10px;
+}
+
+.event_rtl_slider.owl-carousel .owl-nav button:last-child {
+	margin-right: 0;
+}
+
+
+
 .event__item {
 	-webkit-box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
 	box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
@@ -564,7 +598,7 @@ ol {
 	color: #ffffff;
 	display: inline-block;
 	background: #5c00ce;
-	padding: 12px 8px 9px 20px;
+	padding: 12px 18px 9px 20px;
 }
 
 .event__item__text {
@@ -769,6 +803,19 @@ ol {
 	width: calc(100% - 40px);
 	margin-left: 40px;
 	height: 502px;
+}
+
+
+/*---------------------
+  services
+-----------------------*/
+
+.services .section-title {
+	text-align: center;
+}
+
+.services .section-title h1 {
+	font-size: 90px;
 }
 
 /*---------------------
@@ -2615,6 +2662,98 @@ ol {
 	margin-bottom: 34px;
 }
 
+/*--------------------------------- Ronak's changes -----------------------------*/
+
+.header_logo_text h1 {
+	font-size: 71px;
+	font-weight : 400;
+	font-family: "Rockville Solid Regular";
+	color: #ffffff;
+	margin-bottom: 22px;
+	margin-top: 22px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.header_logo_text span {
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.footer_logo_text h2 {
+	font-size: 36px;
+	font-weight : 700;
+	font-family: "Rajdhani", sans-serif;
+	color: #ffffff;
+	margin-bottom: 22px;
+	margin-top: 10px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.footer_logo_text .footer__social__links a {
+	font-size: 18px;
+	color: #5c00ce;
+	height: 50px;
+	width: 50px;
+	background: #ffffff;
+	border-radius: 50%;
+	line-height: 50px;
+	text-align: center;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom : 50px;
+}
+
+.gallery{
+  width:80%;
+  margin:0 auto;
+  height : 550px;
+  overflow : hidden;
+}
+
+/*--------------------------------- Gallery CSS By Ronak -----------------------------*/
+
+.rowGallery {
+  height : 550px;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 
 @media only screen and (min-width: 1200px) {
@@ -2703,8 +2842,16 @@ ol {
 		padding-bottom: 776px;
 	}
 	.footer {
-		margin-top: -740px;
+		/*margin-top: -740px;*/
 		background-position: top 0 left 19%;
+	}
+	
+	.header_logo_text h1 {
+		font-size : 61px;
+	}
+	
+	.header_logo_text span {
+		font-size : 14px;
 	}
 }
 
@@ -2809,7 +2956,7 @@ ol {
 		border-radius: 0;
 		padding: 12px 15px;
 		float: none;
-		background: #5c00ce;
+		background: transparent;
 	}
 	.slicknav_nav {
 		position: absolute;
@@ -2852,10 +2999,20 @@ ol {
 		padding-bottom: 940px;
 	}
 	.footer {
-		margin-top: -940px;
+		/*margin-top: -940px;*/
 		background-position: top 0 left 19%;
 	}
+	
+	.header_logo_text h1 {
+		font-size : 51px;
+	}
+	
+	.header_logo_text span {
+		font-size : 12px;
+		letter-spacing: 2px;
+	}
 }
+
 
 /* Small Device = 320px */
 
@@ -2928,7 +3085,16 @@ ol {
 		padding-bottom: 980px;
 	}
 	.footer {
-		margin-top: -970px;
+		/*margin-top: -970px;*/
 		background-position: top 0 left 19%;
+	}
+	
+	.header_logo_text h1 {
+		font-size : 41px;
+	}
+	
+	.header_logo_text span {
+		font-size : 10px;
+		letter-spacing: 1px;
 	}
 }

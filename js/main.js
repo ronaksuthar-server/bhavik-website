@@ -61,6 +61,30 @@
             },
         }
     });
+	
+	$(".event_rtl_slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 3,
+        dots: false,
+        nav: true,
+		rtl : true,
+        navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+			768: {
+                items: 2,
+            },
+			992: {
+                items: 3,
+            },
+        }
+    });
     
     /*--------------------------
         Videos Slider
@@ -95,15 +119,17 @@
 		Magnific
 	--------------------*/
 	var videoLink;
+	var videoId;
 	
 	$('.video-popup').click(function(e){
 		
 		e.preventDefault();
-		//console.log($(this).attr('href'));
+		//videoLink = $(this).data('link');
 		videoLink = $(this).attr('href');
+		videoId = $(this).attr('id');
 		
 		$(this).magnificPopup({
-			disableOn: 700,
+			disableOn: 300,
 			type: 'iframe',
 			mainClass: 'mfp-fade',
 			removalDelay: 160,
@@ -115,7 +141,7 @@
 				youtube: {
 				  index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
 
-				  id: 'v=', // String that splits URL in a two parts, second part should be %id%
+				  id: 'v=', // 'v=' // String that splits URL in a two parts, second part should be %id%
 				  // Or null - full URL will be returned
 				  // Or a function that should return %id%, for example:
 				  // id: function(url) { return 'parsed id'; }
@@ -131,6 +157,16 @@
 			}
 		});
 		
+	});
+	
+	$('.image-popup-vertical-fit').magnificPopup({
+		
+		type: 'image',
+		removalDelay: 300,
+		gallery: {
+			enabled: true
+		}
+
 	});
 	
 	
@@ -219,7 +255,7 @@
         cursorwidth: "5px",
         background: "#e1e1e1",
         cursorborder: "",
-        autohidemode: false,
+        autohidemode: true,
         horizrailenabled: false
     });
 
